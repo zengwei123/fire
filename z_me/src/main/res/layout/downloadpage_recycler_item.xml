@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:background="#ffffff"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right">
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+            <TextView
+                android:id="@+id/Video_Recycler_Item"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="#FF4E50"
+                android:gravity="center|left"
+                android:drawableRight="@mipmap/bofang"
+                android:paddingRight="10dp"
+                android:textSize="@dimen/Text_Size_3"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+            <View
+                android:background="#f5f5f5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#ff0000"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="删除" />
+        </LinearLayout>
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+</LinearLayout>

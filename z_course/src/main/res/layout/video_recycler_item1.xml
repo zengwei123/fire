@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_margin="10dp"
+    android:background="#ffffff">
+    <TextView
+        android:id="@+id/Video_Recycler_Item_TextId"
+        android:gravity="center"
+        android:textColor="#D9D9D9"
+        android:background="@drawable/textid_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="131dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Optimal_item_Title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@color/C2B2B2B"
+        android:gravity="center"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/Optimal_item_Message"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="11sp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/Optimal_item_Price"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="#F33C3A"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Optimal_item3_Submit"
+        android:background="@drawable/optimal_recycler_item2_drawable3"
+        android:textColor="#ffffff"
+        android:text="立即报名"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:layout_margin="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp" />
+
+    <View
+        android:background="#F2F2F2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+</LinearLayout>

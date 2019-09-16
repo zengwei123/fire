@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/Question_TextView_Item1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/question_item"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="历年真题"
+            android:textColor="#FF4E50"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/Question_NewPage_Title"
+            android:layout_width="match_parent"
+            android:layout_height="35sp"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/C2B2B2B"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:lines="2"
+            android:text="2018年一级注册消防工程师《消防安全技术实务》考试真题及答案"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <View
+        android:id="@+id/ccczzzz"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6"></View>
+</LinearLayout>

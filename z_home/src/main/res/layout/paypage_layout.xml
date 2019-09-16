@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <include layout="@layout/z_include_title"></include>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="请输入用户名"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/C2B2B2B"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:hint="用户名"
+                android:id="@+id/Pay_UserName"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/paypage_style"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="请填写真实姓名"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/C2B2B2B"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/Pay_Name"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:hint="姓名"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/paypage_style"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="服务说明："
+                android:layout_marginTop="10dp"
+                android:textColor="#FF4E50"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/Pay_services"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="注册消防考试网一级注册消防工程师全科（实务+综合+案例）网络通关班（当期不过，满足条件可免费重学，有效期3年）"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/submit_order_bg"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="课程服务"
+                android:textColor="@color/C2B2B2B"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/paypage_spanner_style"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <Spinner
+                    android:id="@+id/Pay_Spinner"
+                    android:backgroundTint="#CCCCCC"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"></Spinner>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/Pay_zhifubaos"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:src="@mipmap/zhifubao"
+                    android:layout_gravity="center"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                <TextView
+                    android:textColor="#2b2b2b"
+                    android:text=" 支付宝支付"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:textSize="14sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:id="@+id/Pay_zhifubao"
+                    android:background="@drawable/pay_radiobut_select"
+                    android:button="@null"
+                    android:checked="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Pay_weixins"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <ImageView
+                    android:src="@mipmap/weixin"
+                    android:layout_gravity="center"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                <TextView
+                    android:textColor="#2b2b2b"
+                    android:text=" 微信支付"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:gravity="center|left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:id="@+id/Pay_weixin"
+                    android:background="@drawable/pay_radiobut_select"
+                    android:button="@null"
+                    android:checked="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="支付说明："
+                android:layout_marginTop="10dp"
+                android:textColor="#FF4E50"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/Pay_paytext"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text=""
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <View
+            android:background="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+
+        <TextView
+            android:id="@+id/Pay_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="共计："
+            android:textColor="#2b2b2b"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/Pay_Determine"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity=""
+            android:background="#FF4E50"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="确认订单"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>

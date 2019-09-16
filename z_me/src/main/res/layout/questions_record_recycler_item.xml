@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/questions_record_recycler_style"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_margin="8dp"
+    android:layout_height="60dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Questions_Record_recycler_Title"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center|left"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/C2B2B2B"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:id="@+id/Questions_Record_Fen1"
+                android:gravity="center|left"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/Questions_Record_Fen2"
+                android:layout_toRightOf="@+id/Questions_Record_Fen1"
+                android:gravity="center|left"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/Questions_Record_Time"
+                android:layout_alignParentRight="true"
+                android:gravity="center|left"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <include layout="@layout/z_include_title"></include>
+    <ImageView
+        android:id="@+id/Video_XiaZai"
+        android:src="@mipmap/xiazai"
+        android:layout_alignParentRight="true"
+        android:padding="8dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <com.cnitpm.z_course.Video.MyVideoView
+            android:id="@+id/Video_MyVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Video_RecyclerView"
+        android:layout_marginTop="240dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:id="@+id/Video_Download_layout"
+        android:background="#802b2b2b"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="视频缓存"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:paddingLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/home_recycler_item1_text"
+                android:textColor="#2b2b2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Video_Recycler_XiaZai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:id="@+id/Video_Download_Text"
+                android:text="下 载"
+                android:gravity="center"
+                android:textSize="@dimen/Text_Size_4"
+                android:layout_margin="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/textid_style1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        
+    </RelativeLayout>
+</RelativeLayout>

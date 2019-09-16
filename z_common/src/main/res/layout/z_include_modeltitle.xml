@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/Title_Height">
+    <RelativeLayout
+        android:background="@color/Main_Tab_Text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:src="@mipmap/model_logo"
+            android:layout_margin="5dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+        <ImageView
+            android:id="@+id/ModelTitle_Search"
+            android:layout_toLeftOf="@+id/ModelTitle_Message"
+            android:src="@mipmap/model_search"
+            android:padding="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/ModelTitle_Message"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/model_session"
+            android:padding="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

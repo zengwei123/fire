@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cnitpm.fire">
+    <!--网络请求-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!--获取网络信息状态，如当前的网络连接是否有效-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取当前WiFi接入的状态以及WLAN热点的信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--读取外部存储权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--安装apk权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--android 9.0上使用前台服务，需要添加权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--允许程序写入外部存储，如SD卡上写文件-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许访问摄像头进行拍照-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--访问电话状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logoc"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logoc"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:name="com.cnitpm.fire.MyApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Message.MessageActivity"></activity>
+        <activity android:name=".Message.MessageContentPage"></activity>
+        <activity android:name=".Search.SearchActivity"></activity>
+
+        <activity android:name="com.cnitpm.z_daypractice.DayPractice.DayPracticeActivity"></activity>
+
+        <activity android:name="com.cnitpm.z_homeitem.News.NewsActivity"></activity>
+        <activity android:name="com.cnitpm.z_homeitem.Reference.ReferenceActivity"></activity>
+
+        <activity android:name="com.cnitpm.z_question.Parsing.ParsingActivity"></activity>
+        <activity android:name="com.cnitpm.z_question.TrueTopic.TrueTopicActivity"></activity>
+        <activity android:name="com.cnitpm.z_question.Simulation.SimulationActivity"></activity>
+
+        <activity android:name="com.cnitpm.z_home.PayPage.PayPageActivity"></activity>
+
+        <activity android:name="com.cnitpm.z_login_registered.Login.LoginActivity"></activity>
+        <activity android:name="com.cnitpm.z_login_registered.ForgetPass.ForgetPageActivity"></activity>
+        <activity android:name="com.cnitpm.z_login_registered.Registered.RegisteredActivity"></activity>
+
+        <activity android:name="com.cnitpm.z_subjects.Chapter.ChapterActivity"></activity>
+        <activity android:name="com.cnitpm.z_subjects.JZA.JZAActivity"></activity>
+
+        <activity android:name="com.cnitpm.z_me.UpdatePass.UpdatePassActivity"></activity>
+        <activity android:name="com.cnitpm.z_me.Questions_Record.Questions_RecordActivity"></activity>
+        <activity android:name="com.cnitpm.z_me.ErrorTopic.ErrorTopicActivity"></activity>
+        <activity android:name="com.cnitpm.z_me.DownLoadPage.DownLoadPageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name="com.cnitpm.z_course.Video.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name="com.cnitpm.z_webpage.Page.PageActivity"></activity>
+
+
+
+        <!--适配框架-->
+        <meta-data android:name="design_width_in_dp" android:value="360"/>
+        <meta-data android:name="design_height_in_dp" android:value="640"/>
+
+        <!--下载的-->
+        <service android:name=".Download.VersionService"></service>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.cnitpm.fire.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>

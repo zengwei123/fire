@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.cnitpm.z_common.Custom.NoScrollViewPager
+        android:id="@+id/Main_ViewPager"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.cnitpm.z_common.Custom.NoScrollViewPager>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/Main_TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        app:tabBackground="@android:color/transparent"
+        android:focusable="true"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="#666666"
+        android:layout_alignParentBottom="true"
+        app:tabIndicatorColor="#ffffff"
+        app:tabSelectedTextColor="@color/Main_Tab_Text">
+    </android.support.design.widget.TabLayout>   
+</RelativeLayout>

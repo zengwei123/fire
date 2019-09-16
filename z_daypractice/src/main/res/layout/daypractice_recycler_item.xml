@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/daypractice_recycler_style"
+    android:paddingLeft="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_height="60dp">
+
+    <LinearLayout
+        android:layout_toLeftOf="@+id/DayPractice_recycler_Image"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/DayPractice_recycler_Title"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center|left"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/C2B2B2B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/DayPractice_Time"
+            android:text=""
+            android:gravity="center|left"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/DayPractice_recycler_Image"
+        android:src="@mipmap/daypractice_item"
+        android:layout_alignParentRight="true"
+        android:padding="15dp"
+        android:layout_width="50dp"
+        android:layout_height="match_parent" />
+</RelativeLayout>

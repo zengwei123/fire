@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/z_include_title"></include>
+    <LinearLayout
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/Forever_Phone"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:drawableLeft="@mipmap/user_forgetpass_phone"
+            android:hint="请输入手机号/用户名"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+        <View
+            android:background="#EEEEEE"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <EditText
+                android:id="@+id/Forever_Code"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:inputType="number"
+                android:maxLines="1"
+                android:drawableLeft="@mipmap/user_forgetpass_duanxin"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:hint="请输入验证码" />
+            <TextView
+                android:id="@+id/Forever_code_but"
+                android:text="获取验证码"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:background="@drawable/login_edit"
+                android:layout_marginRight="5dp"
+                android:textColor="#FF4E50"
+                android:layout_width="100dp"
+                android:layout_height="25dp" />
+        </LinearLayout>
+        <View
+            android:background="#EEEEEE"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <EditText
+            android:id="@+id/Forever_Pass"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:drawableLeft="@mipmap/user_forgetpass_pass"
+            android:hint="输入新密码"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+        <View
+            android:background="#EEEEEE"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <TextView
+            android:id="@+id/Forever_Submits"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/zxcafdsas"
+            android:background="#FF4E50"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

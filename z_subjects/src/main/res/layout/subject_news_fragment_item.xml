@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:layout_height="61dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Subjects_Page_Fragment_item_TextView"
+        android:gravity="center|left"
+        android:textSize="13sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="#4D4D4D"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/Subjects_Page_Fragment_item_Time"
+        android:text="2019-09-09"
+        android:gravity="center|left"
+        android:textSize="11sp"
+        android:textColor="#999999"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="25dp" />
+    <View
+        android:background="#E6E6E6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+</LinearLayout>

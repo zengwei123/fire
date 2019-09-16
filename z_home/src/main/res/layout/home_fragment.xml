@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/z_include_modeltitle"></include>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/Home_SwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:background="#ffffff"
+                    android:id="@+id/Home_Fragment_BGABanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:padding="10dp"
+                    app:banner_pointAutoPlayInterval="5000"
+                    app:banner_pointContainerBackground="#00ffffff">
+
+                </cn.bingoogolapple.bgabanner.BGABanner>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/Home_Fragment_RecyclerView_Menu"
+                    android:background="#ffffff"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+                <RelativeLayout
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+                    <TextView
+                        android:id="@+id/Home_Apply_Title1"
+                        android:layout_margin="8dp"
+                        android:drawableLeft="@mipmap/apply1"
+                        android:gravity="center|left"
+                        android:textColor="@color/C2B2B2B"
+                        android:layout_toLeftOf="@+id/Home_Apply_Submit1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/Home_Apply_Submit1"
+                        android:layout_margin="8dp"
+                        android:text="立即报名"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/C2B2B2B"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/news"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/Home_New_TabLayout"
+                        app:tabBackground="@android:color/transparent"
+                        app:tabIndicatorColor="#FF5153"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <android.support.design.widget.TabItem
+                            android:text="最近更新"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <android.support.design.widget.TabItem
+                            android:text="章节练习"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <android.support.design.widget.TabItem
+                            android:text="考试中心"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <android.support.design.widget.TabItem
+                            android:text="推荐专题"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </android.support.design.widget.TabLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/Home_New_ViewPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="660dp">
+
+                    </android.support.v4.view.ViewPager>
+                    <TextView
+                        android:id="@+id/Home_More_TextView"
+                        android:text="点击查看更多>>"
+                        android:gravity="center"
+                        android:textColor="#FF4E50"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/C2B2B2B"
+                    android:paddingLeft="10dp"
+                    android:text="优选课程"
+                    android:textSize="16sp"
+                    android:background="@drawable/home_fragment_optimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:background="#ffffff"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <ImageView
+                            android:background="@drawable/optimal_left"
+                            android:src="@mipmap/optimal1"
+                            android:layout_weight="1"
+                            android:paddingRight="35dp"
+                            android:paddingLeft="35dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <ImageView
+                            android:background="@drawable/optimal_right"
+                            android:src="@mipmap/optimal2"
+                            android:layout_weight="1"
+                            android:paddingRight="35dp"
+                            android:paddingLeft="35dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/Home_Optimal_Recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                    <View
+                        android:background="#f2f2f2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="1dp"
+                        android:layout_height="611dp"></View>
+                </RelativeLayout>
+                <LinearLayout
+                    android:background="@drawable/optimal_bottom"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:background="#f2f2f2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"></View>
+                    <TextView
+                        android:text="消防工程师证书含金量高，有远见的人都在考"
+                        android:paddingTop="8dp"
+                        android:textColor="#F33C3A"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:id="@+id/Optimal_Consulting"
+                            android:background="@drawable/optimal_recycler_item2_drawable3"
+                            android:textColor="#ffffff"
+                            android:text="立即咨询"
+                            android:gravity="center"
+                            android:paddingRight="10dp"
+                            android:layout_marginRight="20dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp" />
+                        <TextView
+                            android:id="@+id/Optimal_Sign"
+                            android:background="@drawable/optimal_recycler_item2_drawable3"
+                            android:textColor="#ffffff"
+                            android:text="立即报名"
+                            android:gravity="center"
+                            android:paddingRight="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:paddingLeft="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

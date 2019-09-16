@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="#FF4E50">
+
+                <ImageView
+                    android:id="@+id/Me_Image"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/apply1" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/Me_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:layout_weight="1"
+                        android:text="用户名123"
+                        android:textSize="21sp" />
+                    <TextView
+                        android:id="@+id/Me_UserIdentity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#FF4E50"
+                        android:background="@drawable/me_kemu"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="您的身份：普通会员"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+                <TextView
+                    android:text="学习系统"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/me_border"
+                    android:textColor="#2b2b2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:drawableTop="@mipmap/me_item1"
+                        android:layout_weight="1"
+                        android:id="@+id/Me_other_item1"
+                        android:text="技术实务课程"
+                        android:textColor="#666666"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:drawableTop="@mipmap/me_item2"
+                        android:layout_weight="1"
+                        android:id="@+id/Me_other_item2"
+                        android:text="综合能力课程"
+                        android:textColor="#666666"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:drawableTop="@mipmap/me_item3"
+                        android:layout_weight="1"
+                        android:id="@+id/Me_other_item3"
+                        android:text="案例分析课程"
+                        android:textColor="#666666"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:drawableTop="@mipmap/me_item4"
+                        android:layout_weight="1"
+                        android:id="@+id/Me_other_item4"
+                        android:text="消防题库"
+                        android:textColor="#666666"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Me_Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:text="Copyright@2010-2019\n\t长沙志腾信息科技有限公司版权所有"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:textColor="#2b2b2b"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"
+                android:textSize="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

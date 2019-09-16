@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Login_Image"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:src="@mipmap/login_logo" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/Login_TabLayout"
+        android:layout_below="@+id/Login_Image"
+        android:focusable="true"
+        app:tabBackground="@android:color/transparent"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="#666666"
+        app:tabIndicatorColor="#ffffff"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingEnd="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/Login_ViewPage"
+        android:layout_below="@+id/Login_TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:id="@+id/Login_onBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@mipmap/exam_right" />
+
+</RelativeLayout>
