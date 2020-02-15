@@ -22,10 +22,11 @@ public class CourseRequestServiceFactory {
     private static CourseRequestService courseRequestService = RetrofitServiceManager.getInstance().create(CourseRequestService.class);
     private static UserMessage userMessage;
     static {
-        userMessage= SimpleUtils.getUserMessage();
+
     }
     /**视频**/
     public static void shipin(RequestObserver.RequestObserverNext requestObserverNext,int type){
+        userMessage= SimpleUtils.getUserMessage();
         LinkedHashMap<String,String> linkedHashMap=new LinkedHashMap<>();
         linkedHashMap.put("uid",userMessage.getUVAO().getUid()+"");
         linkedHashMap.put("vipstr",userMessage.getUVAO().getVipstr()+"");
@@ -47,6 +48,7 @@ public class CourseRequestServiceFactory {
 
     /**视频**/
     public static void mob_play(RequestObserver.RequestObserverNext requestObserverNext, Context context, int type, int vsid, int gq){
+        userMessage= SimpleUtils.getUserMessage();
         LinkedHashMap<String,String> linkedHashMap=new LinkedHashMap<>();
         linkedHashMap.put("uid",userMessage.getUVAO().getUid()+"");
         linkedHashMap.put("vipstr",userMessage.getUVAO().getVipstr()+"");

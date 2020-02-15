@@ -17,6 +17,7 @@ public class CourseModel {
     private int spfou;
     private int kjfou;
     private String kjurl;
+    private String xturl;
     private int xtfou;
     private int zsdxtid;
 
@@ -58,6 +59,14 @@ public class CourseModel {
 
     public void setKjurl(String kjurl) {
         this.kjurl = kjurl;
+    }
+
+    public String getXturl() {
+        return xturl;
+    }
+
+    public void setXturl(String xturl) {
+        this.xturl = xturl;
     }
 
     public int getXtfou() {

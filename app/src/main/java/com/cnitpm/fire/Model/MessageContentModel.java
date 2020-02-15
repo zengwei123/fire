@@ -3,40 +3,31 @@ package com.cnitpm.fire.Model;
 import java.util.List;
 
 public class MessageContentModel {
-    private String Title;
-    private String Content;
-    private String Intime;
+    private String title;
+    private String content;
+    private String intime;
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     public String getContent() {
-        return Content;
+        return content;
     }
 
     public void setContent(String content) {
-        Content = content;
+        this.content = content;
     }
 
     public String getIntime() {
-        return Intime;
+        return intime;
     }
 
     public void setIntime(String intime) {
-        Intime = intime;
-    }
-
-    @Override
-    public String toString() {
-        return "MessageContentModel{" +
-                "Title='" + Title + '\'' +
-                ", Content='" + Content + '\'' +
-                ", Intime='" + Intime + '\'' +
-                '}';
+        this.intime = intime;
     }
 }

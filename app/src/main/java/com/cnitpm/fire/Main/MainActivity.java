@@ -12,8 +12,10 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.arialyy.aria.core.Aria;
 import com.cnitpm.fire.R;
+import com.cnitpm.z_base.BaseActivity;
 import com.cnitpm.z_base.BasePresenter;
 import com.cnitpm.z_base.MvpActivity;
+import com.cnitpm.z_common.SimpleUtils;
 import com.zzhoujay.richtext.RichText;
 
 @Route(path = "/mains/MainPage")

@@ -13,6 +13,7 @@ import com.cnitpm.z_common.NET.RequestObserver;
 import com.cnitpm.z_common.RoutePage.RoutePageActivity;
 import com.cnitpm.z_common.SharedPreferencesHelper;
 import com.cnitpm.z_common.SimpleUtils;
+import com.cnitpm.z_common.UserFule;
 import com.cnitpm.z_login_registered.Net.LRRequestService;
 import com.cnitpm.z_login_registered.Net.LRRequestServiceFactory;
 import com.zzhoujay.richtext.RichText;
@@ -97,7 +98,7 @@ public class RegisteredPresenter extends BasePresenter<RegisteredView> {
             @Override
             public void Next(AllDataState<UserMessage> o) {
                 if (o.getState()==0){
-                    new SharedPreferencesHelper(mvpView.getActivityContext(),"User").putBase64("user",o.getData());
+                    UserFule.PutUser(o.getData());
                     mvpView.getThisActivity().finish();
                 }
                 SimpleUtils.setToast(o.getMessage());

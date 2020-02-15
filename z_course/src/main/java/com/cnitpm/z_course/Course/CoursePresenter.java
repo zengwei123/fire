@@ -103,20 +103,10 @@ public class CoursePresenter extends BasePresenter<CourseView> implements View.O
                            }else {
                                SimpleUtils.setToast("暂无课件");
                            }
-                       }else if(view.getId()==R.id.Course_isKeJian){
+                       }
+                       else if(view.getId()==R.id.Course_isKeJian){
                            if (courseModel.getXtfou()==1||courseModel.getXtfou()==2){
-                               RoutePageActivity.getPageActivity(courseModel.getKjurl());
-                           }else {
-                               if (courseModel.getXtfou()==0)
-                                   SimpleUtils.setToast("暂无习题");
-                               if (courseModel.getXtfou()==3)
-                                   SimpleUtils.setToast("习题未上传");
-                               if (courseModel.getXtfou()==4)
-                                   SimpleUtils.setToast("习题未解锁");
-                           }
-                       }else if(view.getId()==R.id.Course_isKeJian){
-                           if (courseModel.getXtfou()==1||courseModel.getXtfou()==2){
-                               RoutePageActivity.getPageActivity("https://m.cfetiku.com/xg/exam/CreatCfeksExam.aspx?type=1&sid="+courseModel.getZsdxtid());
+                               RoutePageActivity.getPageActivity(courseModel.getXturl());
                            }else {
                                if (courseModel.getXtfou()==0)
                                    SimpleUtils.setToast("暂无习题");

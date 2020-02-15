@@ -15,10 +15,10 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <!--允许程序写入外部存储，如SD卡上写文件-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--允许访问摄像头进行拍照-->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!--访问电话状态-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--&lt;!&ndash;允许访问摄像头进行拍照&ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <!--&lt;!&ndash;访问电话状态&ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
 
     <application
         android:allowBackup="true"

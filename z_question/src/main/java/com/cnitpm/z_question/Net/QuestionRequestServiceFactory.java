@@ -20,11 +20,12 @@ public class QuestionRequestServiceFactory {
     private static QuestionRequestService questionRequestService = RetrofitServiceManager.getInstance().create(QuestionRequestService.class);
     private static UserMessage userMessage;
     static {
-        userMessage= SimpleUtils.getUserMessage();
+
     }
 
     /**考试时间**/
     public static void HomePage(TextView textView){
+        userMessage= SimpleUtils.getUserMessage();
         Observable observable = questionRequestService.HomePage2("2",SimpleUtils.code);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -40,6 +41,7 @@ public class QuestionRequestServiceFactory {
 
     /**历年真题**/
     public static void GetExamList(RequestObserver.RequestObserverNext requestObserverNext, Context context,int type_two){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable;
         if (userMessage!=null){
@@ -58,6 +60,7 @@ public class QuestionRequestServiceFactory {
 
     /**试题解析 模拟试题**/
     public static void GetClassList(RequestObserver.RequestObserverNext requestObserverNext,Context context,int type_two,int page){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable;
         if (userMessage!=null){

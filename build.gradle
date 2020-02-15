@@ -22,6 +22,7 @@ allprojects {
         }
         google()
         jcenter()
+
         maven { url "https://jitpack.io" }
     }
 }
@@ -34,5 +35,5 @@ ext{
     minSdkVersion = 21
     targetSdkVersion = 27
     versionCode = 1
-    versionName = "0.9"
+    versionName = "V1.0"
 }

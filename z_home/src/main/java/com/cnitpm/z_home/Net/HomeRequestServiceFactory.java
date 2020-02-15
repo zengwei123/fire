@@ -38,11 +38,8 @@ import io.reactivex.schedulers.Schedulers;
 public class HomeRequestServiceFactory {
     private static HomeRequestService homeRequestService = RetrofitServiceManager.getInstance().create(HomeRequestService.class);
     private static UserMessage userMessage;
-    static {
-        userMessage= SimpleUtils.getUserMessage();
-    }
-
     public static void HomePage(RequestObserver.RequestObserverNext requestObserverNext,TextView textView){
+        userMessage= SimpleUtils.getUserMessage();
         Observable observable = homeRequestService.HomePage1("1",SimpleUtils.code);
         Observable observable1 = homeRequestService.HomePage2("2",SimpleUtils.code);
         observable.subscribeOn(Schedulers.io())
@@ -60,6 +57,7 @@ public class HomeRequestServiceFactory {
     }
 
     public static void HomePage3(RequestObserver.RequestObserverNext requestObserverNext,Context context){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable = homeRequestService.HomePage3("4",SimpleUtils.code);
         observable.subscribeOn(Schedulers.io())
@@ -69,6 +67,7 @@ public class HomeRequestServiceFactory {
 
     /**最近更新 章节练习 考试练习**/
     public static void GetClassList(RequestObserver.RequestObserverNext requestObserverNext,Context context,int type,String type_two,int page){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable;
         if (userMessage!=null){
@@ -87,6 +86,7 @@ public class HomeRequestServiceFactory {
 
     /**推荐专题**/
     public static void GetExamList(RequestObserver.RequestObserverNext requestObserverNext,Context context,int type){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable;
         if (userMessage!=null){
@@ -106,6 +106,7 @@ public class HomeRequestServiceFactory {
 
     /**支付信息**/
     public static void pay_inform(RequestObserver.RequestObserverNext requestObserverNext,Context context){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable= homeRequestService.pay_inform(SimpleUtils.code);
         observable.subscribeOn(Schedulers.io())
@@ -115,6 +116,7 @@ public class HomeRequestServiceFactory {
 
     /**支付结果校验**/
     public static void pay_return_url(String TradeNo,Context context){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable= homeRequestService.pay_return_url(TradeNo,SimpleUtils.code);
         observable.subscribeOn(Schedulers.io())
@@ -144,6 +146,7 @@ public class HomeRequestServiceFactory {
     private static Context contextz ;
     private static String TradeNo;
     public static void alipay(int type,String yhm,String xm,String uid,Context context){
+        userMessage= SimpleUtils.getUserMessage();
         contextz=context;
         LottieDialog.setDialogWindow(context);
         Observable observable= homeRequestService.alipay(type,yhm,xm,"",uid,SimpleUtils.code);
@@ -210,6 +213,7 @@ public class HomeRequestServiceFactory {
     private static IWXAPI api;
     private static PayReq req;
     public static void WxPay(int type,String yhm,String xm,String uid,Context context){
+        userMessage= SimpleUtils.getUserMessage();
         api = WXAPIFactory.createWXAPI(context, "wxAPPID",false);
         LottieDialog.setDialogWindow(context);
         Observable observable= homeRequestService.WxPay(type,yhm,xm,"",uid,SimpleUtils.code);

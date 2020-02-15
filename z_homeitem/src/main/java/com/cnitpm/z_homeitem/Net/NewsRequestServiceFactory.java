@@ -17,11 +17,9 @@ import io.reactivex.schedulers.Schedulers;
 public class NewsRequestServiceFactory {
     private static NewsRequestService newsRequestService = RetrofitServiceManager.getInstance().create(NewsRequestService.class);
     private static UserMessage userMessage;
-    static {
-        userMessage= SimpleUtils.getUserMessage();
-    }
     /**考试资讯   备考经验**/
     public static void GetClassList(RequestObserver.RequestObserverNext requestObserverNext,Context context,int type,String type_two,int page){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable;
         if (userMessage!=null){

@@ -14,6 +14,7 @@ import com.cnitpm.z_common.RoutePage.RoutePageActivity;
 import com.cnitpm.z_common.SimpleUtils;
 import com.cnitpm.z_common.UtilRecyclerAdapter.SimpleRecyclerViewAdapter;
 import com.cnitpm.z_common.UtilRecyclerAdapter.SimpleRecyclerViewAdapterCallback;
+import com.zzhoujay.richtext.RichText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class MessagePresenter extends BasePresenter<MessageView> {
             public void Next(AllDataState<MessageModel> o) {
                 SimpleRecyclerViewAdapter simpleRecyclerViewAdapter=new SimpleRecyclerViewAdapter(R.layout.message_recycler_item, mvpView.getActivityContext(), o.getData().getDataList(), (helper, item) -> {
                     MessageModel.DataList dataList= (MessageModel.DataList) item;
-                    helper.setText(R.id.Message_Recycler_Item_Title,dataList.getTitle());
+                    RichText.fromHtml(dataList.getTitle()).into(helper.getView(R.id.Message_Recycler_Item_Title));
                     helper.setText(R.id.Message_Recycler_Item_Time,dataList.getIntime());
                 });
                 simpleRecyclerViewAdapter.setIsNoNetWork(true);

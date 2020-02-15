@@ -29,6 +29,7 @@ import com.cnitpm.z_common.NET.RetrofitServiceManager;
 import com.cnitpm.z_common.RoutePage.RoutePageActivity;
 import com.cnitpm.z_common.SharedPreferencesHelper;
 import com.cnitpm.z_common.SimpleUtils;
+import com.cnitpm.z_common.UserFule;
 import com.cnitpm.z_login_registered.Net.LRRequestService;
 import com.cnitpm.z_login_registered.Net.LRRequestServiceFactory;
 import com.cnitpm.z_login_registered.R;
@@ -76,10 +77,10 @@ public class DXFragment extends BaseFragment implements View.OnClickListener {
             @Override
             public void Next(AllDataState<UserMessage> o) {
                 if(o.getState()==0){
-                    new SharedPreferencesHelper(getContext(),"User").putBase64("user",o.getData());
-                   // RoutePageActivity.getMainPage();
+//                    new SharedPreferencesHelper(getContext(),"User").putBase64("user",o.getData());
+                    UserFule.PutUser(o.getData());
                     getActivity().finish();
-                    //((BaseActivity)getActivity()).finishAllActivity();
+
                 }
                SimpleUtils.setToast(o.getMessage());
                 LottieDialog.stopDialogView();

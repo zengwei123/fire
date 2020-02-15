@@ -120,9 +120,10 @@ public class SimpleUtils {
 
     /**权限获取**/
     public static void getPermissions(){
+        String[] strings={Permission.READ_EXTERNAL_STORAGE, Permission. WRITE_EXTERNAL_STORAGE};
         XXPermissions.with(BaseActivity.getInstance())
 //                .permission(Permission.SYSTEM_ALERT_WINDOW, Permission.REQUEST_INSTALL_PACKAGES) //支持请求6.0悬浮窗权限8.0请求安装权限
-//                .permission() //不指定权限则自动获取清单中的危险权限
+                .permission(strings) //不指定权限则自动获取清单中的危险权限
                 .request(new OnPermission() {
 
                     @Override
@@ -244,12 +245,12 @@ public class SimpleUtils {
 
     /**获取用户信息**/
     public static UserMessage getUserMessage(){
-        return (UserMessage) new SharedPreferencesHelper(BaseActivity.getInstance(),"User").getBase64("user");
+        return UserFule.GetUser();
     }
 
     /**删除用户信息**/
     public static void removeUserMessage(){
-       new SharedPreferencesHelper(BaseActivity.getInstance(),"User").clear();
+        UserFule.RemoveUser();
     }
 
     /**获取前月份**/

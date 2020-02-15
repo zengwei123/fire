@@ -41,10 +41,7 @@ public class CourseFragment extends MvpFragment<CoursePresenter> implements Cour
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if(isVisibleToUser){
-            if (isOne){
-                mvpPresenter.init();
-                isOne=false;
-            }
+            mvpPresenter.init();
         }
     }
 

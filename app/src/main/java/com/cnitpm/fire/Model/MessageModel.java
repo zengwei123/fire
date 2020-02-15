@@ -40,9 +40,9 @@ public class MessageModel {
 
     public class DataList{
         private int Id;
-        private String Title;
+        private String title;
         private String Msgtype;
-        private String Intime;
+        private String intime;
 
         public int getId() {
             return Id;
@@ -53,11 +53,11 @@ public class MessageModel {
         }
 
         public String getTitle() {
-            return Title;
+            return title;
         }
 
         public void setTitle(String title) {
-            Title = title;
+            title = title;
         }
 
         public String getMsgtype() {
@@ -69,11 +69,11 @@ public class MessageModel {
         }
 
         public String getIntime() {
-            return Intime;
+            return intime;
         }
 
         public void setIntime(String intime) {
-            Intime = intime;
+            intime = intime;
         }
     }
 }

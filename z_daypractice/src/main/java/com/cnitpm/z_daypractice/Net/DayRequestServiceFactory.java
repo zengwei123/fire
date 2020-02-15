@@ -20,11 +20,8 @@ import io.reactivex.schedulers.Schedulers;
 public class DayRequestServiceFactory {
     private static DayRequestService dayRequestService = RetrofitServiceManager.getInstance().create(DayRequestService.class);
     private static UserMessage userMessage;
-    static {
-        userMessage= SimpleUtils.getUserMessage();
-    }
-
     public static void GetClassList(RequestObserver.RequestObserverNext requestObserverNext,Context context,int kemuX,String Month,int page){
+        userMessage= SimpleUtils.getUserMessage();
         LottieDialog.setDialogWindow(context);
         Observable observable;
         if (userMessage!=null){

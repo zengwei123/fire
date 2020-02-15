@@ -23,10 +23,13 @@ import com.cnitpm.z_common.Model.AllDataState;
 import com.cnitpm.z_common.Model.UserMessage;
 import com.cnitpm.z_common.NET.RequestObserver;
 import com.cnitpm.z_common.NET.RetrofitServiceManager;
+import com.cnitpm.z_common.RoutePage.RoutePageActivity;
 import com.cnitpm.z_common.SimpleUtils;
 import com.hjq.permissions.OnPermission;
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
+import com.zzhoujay.richtext.RichText;
+import com.zzhoujay.richtext.callback.OnUrlClickListener;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -46,12 +49,9 @@ import static android.os.Environment.DIRECTORY_DOWNLOADS;
 public class MainRequestServiceFactory {
     private static MainRequestService mainRequestService = RetrofitServiceManager.getInstance().create(MainRequestService.class);
     private static UserMessage userMessage;
-    static {
-        userMessage= SimpleUtils.getUserMessage();
-    }
-
     /**获取会员消息**/
     public static void Mymsg(RequestObserver.RequestObserverNext requestObserverNext,Context context){
+        userMessage = SimpleUtils.getUserMessage();
         LinkedHashMap<String,String> linkedHashMap=new LinkedHashMap<>();
         linkedHashMap.put("uid",userMessage.getUVAO().getUid()+"");
         linkedHashMap.put("vipstr",userMessage.getUVAO().getVipstr()+"");
@@ -70,6 +70,7 @@ public class MainRequestServiceFactory {
     }
     /**获取会员消息详细内容**/
     public static void MymsgInfo(TextView MessageContent_Title,Context context,TextView MessageContent_Time,TextView MessageContent_Content,int id){
+        userMessage = SimpleUtils.getUserMessage();
         LinkedHashMap<String,String> linkedHashMap=new LinkedHashMap<>();
         linkedHashMap.put("uid",userMessage.getUVAO().getUid()+"");
         linkedHashMap.put("id",id+"");
@@ -89,9 +90,12 @@ public class MainRequestServiceFactory {
                     public void onNext(AllDataState<MessageContentModel> o) {
                         super.onNext(o);
                         try {
-                            MessageContent_Title.setText(o.getData().getTitle());
+                            RichText.fromHtml(o.getData().getTitle()).into(MessageContent_Title);
                             MessageContent_Time.setText(o.getData().getIntime());
-                            MessageContent_Content.setText(o.getData().getContent());
+                            RichText.fromHtml(o.getData().getContent()).urlClick(url ->{
+                                RoutePageActivity.getPageActivity(url);
+                                return true;
+                            }).into(MessageContent_Content);
                         }catch (Exception e){ }
                     }
                 });

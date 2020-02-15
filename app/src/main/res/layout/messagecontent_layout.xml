@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingRight="12dp"
-    android:paddingLeft="12dp"
+    android:background="#ffffff"
     android:orientation="vertical">
 
     <include layout="@layout/z_include_title"></include>
@@ -12,12 +11,14 @@
         android:id="@+id/MessageContent_Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/C2B2B2B"
         android:textSize="@dimen/Text_Size_3"
         android:gravity="center" />
     <TextView
         android:id="@+id/MessageContent_Time"
         android:gravity="center"
         android:textSize="@dimen/Text_Size_1"
+        android:textColor="@color/C2B2B2B"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <android.support.v4.widget.NestedScrollView
@@ -27,6 +28,7 @@
             android:id="@+id/MessageContent_Content"
             android:gravity="center"
             android:textSize="@dimen/Text_Size_2"
+            android:textColor="@color/C2B2B2B"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </android.support.v4.widget.NestedScrollView>

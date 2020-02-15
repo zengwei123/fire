@@ -21,6 +21,7 @@
                 <cn.bingoogolapple.bgabanner.BGABanner
                     android:background="#ffffff"
                     android:id="@+id/Home_Fragment_BGABanner"
+                    app:banner_pointDrawable="@drawable/banner_style"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="fitXY"
